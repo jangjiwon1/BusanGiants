@@ -25,4 +25,31 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/resources/static/css</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/PortFolio/PortFolio/src/main/resources/sportz-gh-pages/sportz-gh-pages/css</locationURI>
+		</link>
+		<link>
+			<name>src/main/resources/static/fonts</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/PortFolio/PortFolio/src/main/resources/sportz-gh-pages/sportz-gh-pages/fonts</locationURI>
+		</link>
+		<link>
+			<name>src/main/resources/static/images</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/PortFolio/PortFolio/src/main/resources/sportz-gh-pages/sportz-gh-pages/images</locationURI>
+		</link>
+		<link>
+			<name>src/main/resources/static/js</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/PortFolio/PortFolio/src/main/resources/sportz-gh-pages/sportz-gh-pages/js</locationURI>
+		</link>
+		<link>
+			<name>src/main/resources/static/scss</name>
+			<type>2</type>
+			<locationURI>PARENT-2-PROJECT_LOC/PortFolio/PortFolio/src/main/resources/sportz-gh-pages/sportz-gh-pages/scss</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

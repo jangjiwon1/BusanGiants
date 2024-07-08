@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-section {
+      margin-top: 50px;
+    }
+    .form-section h2 {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container form-section">
+    <h2>회원가입</h2>
+    <form>
+      <div class="form-group row">
+        <label for="userid" class="col-sm-2 col-form-label">아이디 <span class="text-danger">*</span></label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="userid" placeholder="아이디를 입력하세요.">
+        </div>
+        <div class="col-sm-2">
+          <button type="button" class="btn btn-secondary">중복확인</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-form-label">비밀번호 <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력하세요.">
+      </div>
+      <div class="form-group">
+        <label for="confirm_password" class="col-form-label">비밀번호 확인 <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" id="confirm_password" placeholder="비밀번호를 확인하세요.">
+      </div>
+      <div class="form-group">
+        <label for="name" class="col-form-label">이름 <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="name" placeholder="이름을 입력하세요.">
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">성별 <span class="text-danger">*</span></label>
+        <div class="col-sm-10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="남">
+            <label class="form-check-label" for="male">남</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="여">
+            <label class="form-check-label" for="female">여</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">생년월일 <span class="text-danger">*</span></label>
+        <div class="col-sm-3">
+          <select class="form-control" id="birth_year">
+            <option>년도</option>
+            <!-- Add year options here -->
+          </select>
+        </div>
+        <div class="col-sm-3">
+          <select class="form-control" id="birth_month">
+            <option>월</option>
+            <!-- Add month options here -->
+          </select>
+        </div>
+        <div class="col-sm-3">
+          <select class="form-control" id="birth_day">
+            <option>일</option>
+            <!-- Add day options here -->
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact" class="col-form-label">연락처 <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="contact" placeholder="-을 포함해서 입력하세요.">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="sms_opt_in">
+        <label class="form-check-label" for="sms_opt_in">BMS에서 발송하는 SMS 소식을 수신합니다.</label>
+      </div>
+      <div class="form-group">
+        <label for="email" class="col-form-label">이메일 <span class="text-danger">*</span></label>
+        <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요.">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="email_opt_in">
+        <label class="form-check-label" for="email_opt_in">BMS에서 발송하는 E-mail을 수신합니다.</label>
+      </div>
+      <button type="submit" class="btn btn-primary">가입하기</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
