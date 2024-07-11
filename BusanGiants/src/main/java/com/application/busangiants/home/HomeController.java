@@ -1,14 +1,14 @@
-package com.application.busangiants;
+package com.application.busangiants.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class TestController {
+public class HomeController {
 
-	@GetMapping("/a")
-	public String a() {
-		return "contact";
+	@GetMapping("/home")
+	public String home() {
+		return "home";
 	}
 	
 }
