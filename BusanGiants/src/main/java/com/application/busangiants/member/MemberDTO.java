@@ -1,12 +1,12 @@
-package com.application.busangiants.user;
+package com.application.busangiants.member;
 
 import java.util.Date;
 
 import lombok.Data;
 
 @Data
-public class loginDTO {
-	
+public class MemberDTO {
+
 	private String memberId;
 	private String memberNm;
 	private String nickNm;
@@ -19,5 +19,5 @@ public class loginDTO {
 	private String jibunAdress;
 	private String namujiAdress;
 	private Date   joinDt;
-
+	
 }
