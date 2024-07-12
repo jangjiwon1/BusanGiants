@@ -20,8 +20,17 @@
 			MEMBER
 	VALUES	(
 			 #{memberId},
-			 #{memberNm}
-			 
+			 #{memberNm},
+			 #{memberNickName},
+			 #{memberPw},
+			 #{sex},
+			 #{dateBirth},
+			 #{phoneNumber},
+			 #{email},
+			 #{zipcode},
+			 #{roadAddress},
+			 #{jibunAddress},
+			 #{joinDt}
 	)
 			
 </insert>
