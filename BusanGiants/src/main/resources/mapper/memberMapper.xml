@@ -3,37 +3,37 @@
 
 <mapper namespace="com.application.busangiants.member.MemberDAO">
 
-<select id="login" resultType="MemberDTO" parameterType="String">
-	SELECT	*
-	FROM	MEMBER
-	WHERE	MEMBER_ID = #{memberId}
-</select>
-
-<select id="checkDuplicatedId" parameterType="String" resultType="String">
-	SELECT	MEMBER_ID
-	FROM	MEMBER
-	WHERE	MEMBER_ID = #{memberId}
-</select>
-
-<insert id="register" parameterType="memberDTO">
-	INSERT	INTO
-			MEMBER
-	VALUES	(
-			 #{memberId},
-			 #{memberNm},
-			 #{memberNickName},
-			 #{memberPw},
-			 #{sex},
-			 #{dateBirth},
-			 #{phoneNumber},
-			 #{email},
-			 #{zipcode},
-			 #{roadAddress},
-			 #{jibunAddress},
-			 #{joinDt}
-	)
-			
-</insert>
+	<select id="login" resultType="MemberDTO" parameterType="String">
+		SELECT	*
+		FROM	MEMBER
+		WHERE	MEMBER_ID = #{memberId}
+	</select>
+	
+	<select id="checkDuplicatedId" parameterType="String" resultType="String">
+		SELECT	MEMBER_ID
+		FROM	MEMBER
+		WHERE	MEMBER_ID = #{memberId}
+	</select>
+	
+	<insert id="register" parameterType="memberDTO">
+		INSERT	INTO
+				MEMBER
+		VALUES	(
+				 #{memberId},
+				 #{memberNm},
+				 #{memberNickName},
+				 #{passwd},
+				 #{sex},
+				 #{dateBirth},
+				 #{phoneNumber},
+				 #{email},
+				 #{zipcode},
+				 #{roadAddress},
+				 #{jibunAddress},
+				 #{joinDt}
+		)
+				
+	</insert>
 
 
 

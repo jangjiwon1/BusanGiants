@@ -1,9 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
+  <script>
+  
+	$().ready(function(){
+		
+		$("#btnOverLapped").click(function(){
+			
+			let memberId = $("#memberId").val();
+			
+			if (memberId == ''){
+				alert("ID를 확인하세요.");
+				return;
+			}
+			
+			$.ajax({
+				url  : "/member/checkDuplicatedId",
+				type : "post",
+				data : {"memberId" : memberId},
+				success : function (result) {
+					if (result == "duplicate") {
+						alert("사용할 수 있는 ID입니다.");
+					}
+					else {
+						alert("사용할 수 없는 ID입니다.")
+					}
+				}
+				
+			});
+			
+		});
+		
+		$("form").submit(function(){
+			
+			if ($("#passwd").val() != $("#confirmPasswd").val()) {
+				alert("비밀번호를 확인하세요.");
+				$("#passwd").focus();
+				return false;
+				
+			}
+			
+		});
+		
+	});
+  </script>
+  
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     .form-section {
@@ -20,26 +65,26 @@
 <body>
   <div class="container form-section">
     <h2>회원가입</h2>
-    <form>
-      <div class="form-group row">
-        <label for="userid" class="col-sm-2 col-form-label">아이디 <span class="text-danger">*</span></label>
+    <form th:action="@{/member/register}" method="post" class="checkout__form">
+      <div class="row">
+        <label for="memberId" class="col-sm-2 col-form-label">아이디 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
           <input type="text" class="form-control" id="userid" placeholder="아이디를 입력하세요.">
         </div>
         <div class="col-sm-3">
-          <button type="button" class="btn btn-secondary">중복확인</button>
+          <input type="button" id="btnOverlapped" value="중복확인">
         </div>
       </div>
       <div class="form-group row">
         <label for="password" class="col-sm-2 col-form-label">비밀번호 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
-          <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력하세요.">
+          <input type="password" class="form-control" id="passwd" placeholder="비밀번호를 입력하세요.">
         </div>
       </div>
       <div class="form-group row">
         <label for="confirm_password" class="col-sm-2 col-form-label">비밀번호 확인 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
-          <input type="password" class="form-control" id="confirm_password" placeholder="비밀번호를 확인하세요.">
+          <input type="password" class="form-control" id="confirmPasswd" placeholder="비밀번호를 확인하세요.">
         </div>
       </div>
       <div class="form-group row">
@@ -66,71 +111,25 @@
         <div class="col-sm-2">
           <select class="form-control" id="birth_year">
             <option>년도</option>
-            <option>1960</option>
-            <option>1961</option>
-            <option>1962</option>
-            <option>1963</option>
-            <option>1964</option>
-            <option>1965</option>
-            <option>1966</option>
-            <option>1967</option>
-            <option>1968</option>
-            <option>1969</option>
-            <option>1970</option>
-            <option>1971</option>
-            <option>1972</option>
-            <option>1973</option>
-            <option>1974</option>
-            <option>1975</option>
-            <option>1976</option> 
-            <option>1977</option>
-            <option>1978</option>
-            <option>1979</option>
-            <option>1980</option>
-            <option>1981</option>
-            <option>1982</option>
-            <option>1983</option>
-            <option>1984</option>
-            <option>1985</option>
-            <option>1986</option>
-            <option>1987</option>
-            <option>1988</option>
-            <option>1989</option>
-            <option>1990</option>
-            <option>1991</option>
-            <option>1992</option>
-            <option>1993</option>
-            <option>1994</option>
-            <option>1995</option>
-            <option>1996</option>
-            <option>1997</option>
-            <option>1998</option>
-            <option>1999</option>
-            <option>2000</option>
-            <option>2001</option>
-            <option>2002</option>
-            <option>2003</option>
-            <option>2004</option>
-            <option>2005</option>
-            <option>2006</option>
-            <option>2007</option>
-            <option>2008</option>
-            <option>2009</option>
-            <option>2010</option>
-            <option>2011</option>
-            <option>2012</option>           
+            	<option th:each="leapYear : ${#numbers.sequence(1960 , 2024 , 1)}">
+					<th:block th:text="${leapYear}"></th:block>
+            	</option>
           </select>
         </div>
         <div class="col-sm-1">
           <select class="form-control" id="birth_month">
             <option>월</option>
-            <!-- Add month options here -->
+				<option th:each="leapYear : ${#numbers.sequence(1 , 12 , 1)}">
+					<th:block th:text="${leapYear}"></th:block>
+            	</option>
           </select>
         </div>
         <div class="col-sm-1">
           <select class="form-control" id="birth_day">
             <option>일</option>
-            <!-- Add day options here -->
+				<option th:each="leapYear : ${#numbers.sequence(1 , 31 , 1)}">
+					<th:block th:text="${leapYear}"></th:block>
+            	</option>
           </select>
         </div>
       </div>
