@@ -2,13 +2,15 @@ package com.application.busangiants.myPage;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/user")
 public class MyPageController {
 
-	@GetMapping("user/mypage")
+	@GetMapping("mypage")
 	public String myPage() {
-		return "user/mypage";
+		return "mypage";
 	}
 	
 }
