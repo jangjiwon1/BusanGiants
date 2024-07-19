@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
+  <script th:src="@{/jquery/jquery-3.7.1.min.js}"></script>
   <script>
   
 	$().ready(function(){
@@ -69,7 +70,7 @@
       <div class="row">
         <label for="memberId" class="col-sm-2 col-form-label">아이디 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
-          <input type="text" class="form-control" id="memberId" placeholder="아이디를 입력하세요.">
+          <input type="text" class="form-control" name="memberId" id="memberId" placeholder="아이디를 입력하세요.">
         </div>
         <div class="col-sm-3">
           <input type="button" id="btnOverlapped" value="중복확인">
@@ -78,7 +79,7 @@
       <div class="form-group row">
         <label for="password" class="col-sm-2 col-form-label">비밀번호 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
-          <input type="password" class="form-control" id="passwd" placeholder="비밀번호를 입력하세요.">
+          <input type="password" class="form-control" name="passwd" id="passwd" placeholder="비밀번호를 입력하세요.">
         </div>
       </div>
       <div class="form-group row">
@@ -90,18 +91,18 @@
       <div class="form-group row">
         <label for="name" class="col-sm-2 col-form-label">이름 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
-          <input type="text" class="form-control" id="name" placeholder="이름을 입력하세요.">
+          <input type="text" class="form-control" name="memberNm" id="memberNm" placeholder="이름을 입력하세요.">
         </div>
       </div>
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">성별 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" id="male" value="남">
+            <input class="form-check-input" type="radio" name="sex" id="sex" value="남">
             <label class="form-check-label" for="male">남</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" id="female" value="여">
+            <input class="form-check-input" type="radio" name="sex" id="sex" value="여">
             <label class="form-check-label" for="female">여</label>
           </div>
         </div>
@@ -109,15 +110,15 @@
       <div class="form-group row">
         <label class="col-sm-2 col-form-label">생년월일 <span class="text-danger">*</span></label>
         <div class="col-sm-2">
-          <select class="form-control" id="birth_year">
+          <select class="form-control" name="dateBirth" id="dateBirth">
             <option>년도</option>
-            	<option th:each="leapYear : ${#numbers.sequence(1960 , 2024 , 1)}">
+            	<option th:each="leapYear : ${#numbers.sequence(2024 , 1960 , -1)}">
 					<th:block th:text="${leapYear}"></th:block>
             	</option>
           </select>
         </div>
         <div class="col-sm-1">
-          <select class="form-control" id="birth_month">
+          <select class="form-control" name="dateBirth" id="dateBirth">
             <option>월</option>
 				<option th:each="leapYear : ${#numbers.sequence(1 , 12 , 1)}">
 					<th:block th:text="${leapYear}"></th:block>
@@ -125,7 +126,7 @@
           </select>
         </div>
         <div class="col-sm-1">
-          <select class="form-control" id="birth_day">
+          <select class="form-control" name="dateBirth" id="dateBirth">
             <option>일</option>
 				<option th:each="leapYear : ${#numbers.sequence(1 , 31 , 1)}">
 					<th:block th:text="${leapYear}"></th:block>
@@ -136,21 +137,21 @@
       <div class="form-group row">
         <label for="contact" class="col-sm-2 col-form-label">연락처 <span class="text-danger"></span></label>
         <div class="col-sm-3">
-          <input type="text" class="form-control" id="contact" placeholder="-을 포함해서 입력하세요.">
+          <input type="text" class="form-control" name="phoneNo" id="contact" placeholder="-을 포함해서 입력하세요.">
         </div>
       </div>
 
       <div class="form-group row">
         <label for="email" class="col-sm-2 col-form-label">이메일 <span class="text-danger"></span></label>
         <div class="col-sm-3">
-          <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요.">
+          <input type="email" class="form-control" name="email" id="email" placeholder="이메일을 입력하세요.">
         </div>
       </div>
       
       <div class="form-group row">
-        <label for="email" class="col-sm-2 col-form-label">주소 <span class="text-danger"></span></label>
+        <label for="text" class="col-sm-2 col-form-label">주소 <span class="text-danger"></span></label>
         <div class="col-sm-3">
-          <input type="email" class="form-control" id="email" placeholder="주소를 입력하세요.">
+          <input type="text" class="form-control" name="roadAddress" id="roadAddress" placeholder="주소를 입력하세요.">
         </div>
       </div>
 
@@ -162,7 +163,6 @@
     </form>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

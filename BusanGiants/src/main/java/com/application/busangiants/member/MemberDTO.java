@@ -16,7 +16,7 @@ public class MemberDTO {
 	private String phoneNo;
 	private String email;
 	private String zipcode;
-	private String roadAdress;
+	private String roadAddress;
 	private String jibunAddress;
 	private String namujiAddress;
 	private Date   joinDt;

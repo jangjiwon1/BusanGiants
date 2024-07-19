@@ -3,6 +3,7 @@ package com.application.busangiants.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,14 +26,17 @@ public class MemberController {
 	
 	@PostMapping("/register")
 	@ResponseBody
-	public String register(MemberDTO memberDTO) {
+	public String register(@ModelAttribute MemberDTO memberDTO) {
+		
+		System.out.println("!!!!!!!");
+		System.out.println(memberDTO);
 		
 		memberService.addMember(memberDTO);
 		
 		String jsScript = """
 				<script>
 					alert('회원가입되었습니다.');
-					location.href='/';
+					location.href='/main';
 				</script>""";
 		
 		return jsScript;
@@ -51,7 +55,7 @@ public class MemberController {
 	
 	@PostMapping("/login")
 	@ResponseBody
-	public String login(MemberDTO memberDTO, HttpServletRequest request) {
+	public String login(@ModelAttribute MemberDTO memberDTO, HttpServletRequest request) {
 		
 		String jsScript = "";
 		if (memberService.login(memberDTO)) {
@@ -61,7 +65,8 @@ public class MemberController {
 			
 			jsScript = """
 					<script>
-						location.href='/';
+						alert('로그인 되었습니다.');
+						location.href='/main';
 					</script>""";
 		
 		}
@@ -88,7 +93,7 @@ public class MemberController {
 		String jsScript = """
 				<script>
 					alert('로그아웃 되었습니다.');
-					location.href='/';
+					location.href='/main';
 				</script>
 				""";
 		
