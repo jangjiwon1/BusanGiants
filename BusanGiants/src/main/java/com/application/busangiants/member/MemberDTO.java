@@ -12,12 +12,13 @@ public class MemberDTO {
 	private String nickNm;
 	private String passwd;
 	private String sex;
+	private String dateBirth;
 	private String phoneNo;
 	private String email;
 	private String zipcode;
 	private String roadAdress;
-	private String jibunAdress;
-	private String namujiAdress;
+	private String jibunAddress;
+	private String namujiAddress;
 	private Date   joinDt;
 	
 }

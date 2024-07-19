@@ -9,7 +9,7 @@
   
 	$().ready(function(){
 		
-		$("#btnOverLapped").click(function(){
+		$("#btnOverlapped").click(function(){
 			
 			let memberId = $("#memberId").val();
 			
@@ -27,7 +27,7 @@
 						alert("사용할 수 있는 ID입니다.");
 					}
 					else {
-						alert("사용할 수 없는 ID입니다.")
+						alert("사용할 수 없는 ID입니다.");
 					}
 				}
 				
@@ -69,7 +69,7 @@
       <div class="row">
         <label for="memberId" class="col-sm-2 col-form-label">아이디 <span class="text-danger">*</span></label>
         <div class="col-sm-3">
-          <input type="text" class="form-control" id="userid" placeholder="아이디를 입력하세요.">
+          <input type="text" class="form-control" id="memberId" placeholder="아이디를 입력하세요.">
         </div>
         <div class="col-sm-3">
           <input type="button" id="btnOverlapped" value="중복확인">

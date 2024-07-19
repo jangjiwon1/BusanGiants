@@ -11,7 +11,8 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	private MemberDAO memberDAO;
 	
-	@Autowired PasswordEncoder passwordEncoder;
+	@Autowired 
+	private PasswordEncoder passwordEncoder;
 	
 	@Override
 	public boolean login(MemberDTO memberDTO) {

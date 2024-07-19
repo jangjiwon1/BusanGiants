@@ -69,7 +69,7 @@ public class MemberController {
 		else {
 			jsScript = """
 					<script>
-						alert('로그인에 실패하였습니다. 아이디와 비밀번호를 확인하세요.')
+						alert('로그인에 실패하였습니다. 아이디와 비밀번호를 확인하세요.');
 						history.go(-1);
 					</script>
 					""";

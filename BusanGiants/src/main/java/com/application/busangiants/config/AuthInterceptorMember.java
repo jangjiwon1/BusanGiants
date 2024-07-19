@@ -24,7 +24,7 @@ public class AuthInterceptorMember implements HandlerInterceptor {
 					
 					<script>
 						alert('로그인 해주세요.');
-						location.href = '/user/login';
+						location.href = '/member/login';
 					</script>""";
 			
 			response.setContentType("text/html; charset=utf-8");

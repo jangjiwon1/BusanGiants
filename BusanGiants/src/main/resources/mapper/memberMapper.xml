@@ -21,11 +21,11 @@
 		VALUES	(
 				 #{memberId},
 				 #{memberNm},
-				 #{memberNickName},
+				 #{nickNm},
 				 #{passwd},
 				 #{sex},
 				 #{dateBirth},
-				 #{phoneNumber},
+				 #{phoneNo},
 				 #{email},
 				 #{zipcode},
 				 #{roadAddress},
