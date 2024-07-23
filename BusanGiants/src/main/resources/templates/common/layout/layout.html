@@ -8,16 +8,16 @@
 	
 	<!-- Font -->
 	<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Mukta:300,400,700}"> 
-    <link rel="stylesheet" th:href="@{fonts/icomoon/style.css}">
+    <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}">
     
     <!-- Css Styles -->
-    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{css/magnific-popup.css}">
-    <link rel="stylesheet" th:href="@{css/jquery-ui.css}">
-    <link rel="stylesheet" th:href="@{css/owl.carousel.min.css}">
-    <link rel="stylesheet" th:href="@{css/owl.theme.default.min.css}">
-    <link rel="stylesheet" th:href="@{css/aos.css}">
-    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
+    <link rel="stylesheet" th:href="@{/css/aos.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
     
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -42,21 +42,33 @@
 					</div>
 					<!-- login / register Begin -->
 					<div class="col-6 col-md-9 text-right">
+					<th:block th:if="${session.memberId == null }">
 						<div class="d-inline-block" style="font-size: 0.8em; padding: 0.5em;">
 							<a th:href="@{member/login}" 
 								class="text-secondary p-2 d-flex align-items-center"
-								style="font-size: 0.8em; padding: 0.5em;"> 
-								<span class="d-none d-md-block">login</span>
+								style="font-size: 1.0em; padding: 0.5em;"> 
+								<span class="d-none d-md-block">Login</span>
 							</a>
 						</div>
 						<div class="d-inline-block"
-							style="font-size: 0.8em; padding: 0.5em;">
+							style="font-size: 1.0em; padding: 0.5em;">
 							<a th:href="@{member/register}"
 								class="text-secondary p-2 d-flex align-items-center"
 								style="font-size: 0.8em; padding: 0.5em;"> 
-								<span class="d-none d-md-block">register</span>
+								<span class="d-none d-md-block">Register</span>
 							</a>
 						</div>
+						</th:block>
+						<th:block th:unless="${session.memberId == null}">
+							<div class="d-inline-block"
+							style="font-size: 1.0em; padding: 0.5em;">
+							<a th:href="@{member/logout}"
+								class="text-secondary p-2 d-flex align-items-center"
+								style="font-size: 0.8em; padding: 0.5em;"> 
+								<span class="d-none d-md-block">logout</span>
+							</a>
+						</div>
+						</th:block>
 					</div>
 					<!-- login / register End -->
 				</div>
@@ -65,15 +77,15 @@
 		<nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
 			<div class="container position-relative">
 				<div class="site-logo">
-					<a th:href="@{main.html}"><img th:src="@{images/1628060821216.png}" alt=""></a>
+					<a th:href="@{/main}"><img th:src="@{/images/1628060821216.png}" alt=""></a>
 				</div>
 				<div class="d-inline-block d-md-none ml-md-0 mr-auto py-3">
 					<a th:href="@{#}" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
 				</div>
 				
 				<ul class="site-menu js-clone-nav d-none d-md-block">
-					<li class="has-children active"><a th:href="@{main}">Home</a></li>
-					<li class="has-children"><a th:href="@{user/board}">게시판</a>
+					<li class="has-children active"><a th:href="@{/main}">Home</a></li>
+					<li class="has-children"><a th:href="@{/user/board}">게시판</a>
 						<ul class="dropdown arrow-top">
 							<li><a th:href="@{#}">공지</a></li>
 							<li><a th:href="@{#}">자유게시판</a></li>
@@ -155,7 +167,7 @@
 
 						<div class="block-16">
 							<figure>
-								<img th:src="@{images/img_1.jpg}" alt="Image placeholder"
+								<img th:src="@{/images/img_1.jpg}" alt="Image placeholder"
 									class="img-fluid rounded">
 								<a th:href="@{/}" class="play-button popup-vimeo"><span class="icon-play"></span></a>
 							</figure>
@@ -187,18 +199,18 @@
 	<!-- Footer Section End -->
 	
 	<!-- Js Plugins -->
-	<script th:src="@{js/jquery-3.3.1.min.js}"></script>
-	<script th:src="@{js/jquery-migrate-3.0.1.min.js}"></script>
-	<script th:src="@{js/jquery-ui.js}"></script>
-	<script th:src="@{js/popper.min.js}"></script>
-	<script th:src="@{js/bootstrap.min.js}"></script>
-	<script th:src="@{js/owl.carousel.min.js}"></script>
-	<script th:src="@{js/jquery.stellar.min.js}"></script>
-	<script th:src="@{js/jquery.countdown.min.js}"></script>
-	<script th:src="@{js/jquery.magnific-popup.min.js}"></script>
-	<script th:src="@{js/aos.js}"></script>
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/jquery-migrate-3.0.1.min.js}"></script>
+	<script th:src="@{/js/jquery-ui.js}"></script>
+	<script th:src="@{/js/popper.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/owl.carousel.min.js}"></script>
+	<script th:src="@{/js/jquery.stellar.min.js}"></script>
+	<script th:src="@{/js/jquery.countdown.min.js}"></script>
+	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+	<script th:src="@{/js/aos.js}"></script>
 
-	<script th:src="@{js/main.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
 
 
 </body>
