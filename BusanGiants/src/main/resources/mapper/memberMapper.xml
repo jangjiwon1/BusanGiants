@@ -21,15 +21,11 @@
 		VALUES	(
 				 #{memberId},
 				 #{memberNm},
-				 #{nickNm},
 				 #{passwd},
 				 #{sex},
 				 #{dateBirth},
 				 #{phoneNo},
 				 #{email},
-				 #{zipcode},
-				 #{roadAddress},
-				 #{jibunAddress},
 				 #{joinDt}
 		)
 				

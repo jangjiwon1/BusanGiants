@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      layout:decorate="~{common/layout/layout.html}">
+<head>
+<meta charset="UTF-8">
+<title>Admin Member List</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+	<!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a th:href="@{/main}"><i class="fa fa-home"></i> Admin</a>
+                        <span>Member List</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Shop Cart Section Begin -->
+    <section class="shop-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                	<div class="cart__btn update__btn" align="right">
+						<a th:href="@{/admin/member/memberExcelExport}"><span class="icon_folder_download"></span>Excel</a>
+					</div>
+                    <div class="shop__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th width="10%">번호</th>
+                                    <th width="30%">회원아이디</th>
+                                    <th width="25%">회원이름</th>
+                                    <th width="15%">포인트</th>
+                                    <th width="5%">성별</th>
+                                    <th width="15%">가입일자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            	<th:block th:if="${#lists.isEmpty(memberList) == true}">
+                           			<tr>
+                           				<td colspan="6"><h3>가입된 회원이 없습니다.</h3></td>
+                           			</tr>
+                           		</th:block>
+                           		<th:block th:unless="${#lists.isEmpty(memberList) == true}">
+                            		<tr th:each="memberDTO : ${memberList}">
+                            		 	<td>
+                            		 		<h6 th:text="${memberDTOStat.count}"></h6>
+	                                    </td>
+                                  			<td class="cart__product__item">
+	                                        <h6><a th:href="@{/myPage/myInfo(memberId=${memberDTO.memberId})}" th:text="${memberDTO.memberId}"></a></h6>
+	                                    </td>
+	                                	<td class="cart__product__item__title"><strong th:text="${memberDTO.memberNm }"></strong></td>
+	                                	<td class="cart__total" th:text="|${#numbers.formatInteger(memberDTO.point , 1, 'COMMA')}P|"></td>
+	                                    <td th:text="${memberDTO.sex }"></td>
+	                                    <td th:text="${#dates.format(memberDTO.joinDt , 'yyyy-MM-dd') }"></td>
+	                                </tr>
+                           		</th:block>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Cart Section End -->
+</div>
+
+</body>
+</html>
