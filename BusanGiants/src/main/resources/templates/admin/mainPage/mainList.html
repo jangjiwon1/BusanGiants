@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	
+	
+	<form th:action="@{/main}" method="post" enctype="multipart/form-data">
+		<h3>Giants NewMainPage</h3>
+		<table border="1">			
+			<tr>
+				<td>mainPageImg1</td>	
+				<td><input type="file" name="files"></td>	
+			</tr>
+			<tr>
+				<td>mainPageImg2</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>mainPageImg3</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+						<tr>
+				<td>bestPlayer1</td>	
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>bestPlayer2</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>bestPlayer3</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+						<tr>
+				<td>matchesHome</td>	
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>matchesAway</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>highlight1</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+						<tr>
+				<td>highlight2</td>	
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>highlight3</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>registration1</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+						<tr>
+				<td>registration2</td>	
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td>registration3</td>
+				<td><input type="file" name="files"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><input type="submit" value="업로드" ></td>
+			</tr>
+		</table>
+	</form>
+	<br><hr><br>	
+	
+	
+
+	
+	
+	<h3>썸네일 및 다운로드 메뉴얼</h3>
+	<table border="1">			
+		<tr>
+			<th>이미지</th>
+			<th>파일명</th>
+			<th>다운로드</th>
+		</tr>
+		<tr>
+			<td><img th:src="@{/file/thumbnails(fileName=404.PNG)}" width="200" height="120"/></td>
+			<td>1page 이미지</td>
+			<td><a th:href="@{/file/download(fileName=404.PNG)}">다운로드</a></td>
+		</tr>
+		<tr>
+			<td><img th:src="@{/file/thumbnails(fileName=500.PNG)}" width="200" height="120"/></td>
+			<td>2page 이미지</td>
+			<td><a th:href="@{/file/download(fileName=500.PNG)}">다운로드</a></td>
+		</tr>
+				<tr>
+			<td><img th:src="@{/file/thumbnails(fileName=500.PNG)}" width="200" height="120"/></td>
+			<td>3page 이미지</td>
+			<td><a th:href="@{/file/download(fileName=500.PNG)}">다운로드</a></td>
+		</tr>
+	</table>
+	<br><hr><br>
+	
+	
+	<form th:action="@{/file/delete}" method="post">
+		<h3>파일 삭제 메뉴얼</h3>
+		<table>			
+			<tr>
+				<td>삭제할 파일명 : </td>
+				<td>
+					<input type="text" name="deleteFileName">&emsp; 
+					<input type="submit" value="삭제" >
+				</td>
+			</tr>
+		</table>	
+	</form>	
+	<br><hr><br>
+	
+	
+	<form th:action="@{/file/update}" method="post" enctype="multipart/form-data">
+		<h3>파일 수정 메뉴얼</h3>
+		<table border="1" >			
+			<tr>
+				<td>삭제할 파일명</td> 
+				<td><input type="text" name="deleteFileName"/></td>
+			</tr>
+			<tr>
+				<td>새로 업로드할 파일</td>
+				<td><input type="file" name="modifyFile"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><input type="submit" value="수정하기" ></td>
+			</tr>
+		</table>
+	</form>	
+
+</body>
+</html>

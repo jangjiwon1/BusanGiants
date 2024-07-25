@@ -16,6 +16,7 @@ java {
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
+		
 	}
 }
 
@@ -31,6 +32,10 @@ dependencies {
 	
 	// thymeleaf layout
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	
+	// excel export
+	implementation 'org.apache.poi:poi:5.2.2'
+	implementation 'org.apache.poi:poi-ooxml:5.2.2'
 	
 	// security
 	implementation 'org.springframework.boot:spring-boot-starter-security'

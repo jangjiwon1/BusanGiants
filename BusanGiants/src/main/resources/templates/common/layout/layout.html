@@ -43,31 +43,41 @@
 					<!-- login / register Begin -->
 					<div class="col-6 col-md-9 text-right">
 					<th:block th:if="${session.memberId == null }">
-						<div class="d-inline-block" style="font-size: 0.8em; padding: 0.5em;">
-							<a th:href="@{member/login}" 
-								class="text-secondary p-2 d-flex align-items-center"
-								style="font-size: 1.0em; padding: 0.5em;"> 
-								<span class="d-none d-md-block">Login</span>
-							</a>
-						</div>
-						<div class="d-inline-block"
-							style="font-size: 1.0em; padding: 0.5em;">
-							<a th:href="@{member/register}"
-								class="text-secondary p-2 d-flex align-items-center"
-								style="font-size: 0.8em; padding: 0.5em;"> 
-								<span class="d-none d-md-block">Register</span>
-							</a>
-						</div>
+							<div class="d-inline-block"
+								style="font-size: 0.8em; padding: 0.5em;">
+								<a th:href="@{member/login}"
+									class="text-secondary p-2 d-flex align-items-center"
+									style="font-size: 1.0em; padding: 0.5em;"> <span
+									class="d-none d-md-block">Login</span>
+								</a>
+							</div>/
+							<div class="d-inline-block"
+								style="font-size: 1.0em; padding: 0.5em;">
+								<a th:href="@{member/register}"
+									class="text-secondary p-2 d-flex align-items-center"
+									style="font-size: 0.8em; padding: 0.5em;"> <span
+									class="d-none d-md-block">Register</span>
+								</a>
+							</div>
 						</th:block>
 						<th:block th:unless="${session.memberId == null}">
 							<div class="d-inline-block"
-							style="font-size: 1.0em; padding: 0.5em;">
-							<a th:href="@{member/logout}"
-								class="text-secondary p-2 d-flex align-items-center"
-								style="font-size: 0.8em; padding: 0.5em;"> 
-								<span class="d-none d-md-block">logout</span>
-							</a>
-						</div>
+								style="font-size: 1.0em; padding: 0.5em;">
+								<a th:href="@{member/register}"
+									class="text-secondary p-2 d-flex align-items-center"
+									style="font-size: 1.0em; padding: 0.5em;"> <span
+									class="d-none d-md-block">MyPage</span>
+								</a>
+							</div>/
+							<div class="d-inline-block"
+								style="font-size: 1.0em; padding: 0.5em;">
+								<a th:href="@{member/logout}"
+									class="text-secondary p-2 d-flex align-items-center"
+									style="font-size: 1.0em; padding: 0.5em;"> <span
+									class="d-none d-md-block">logout</span>
+								</a>
+							</div>
+
 						</th:block>
 					</div>
 					<!-- login / register End -->
@@ -79,20 +89,31 @@
 				<div class="site-logo">
 					<a th:href="@{/main}"><img th:src="@{/images/1628060821216.png}" alt=""></a>
 				</div>
-				<div class="d-inline-block d-md-none ml-md-0 mr-auto py-3">
-					<a th:href="@{#}" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
-				</div>
-				
+				<th:block th:if="${session.role == 'admin'}">
 				<ul class="site-menu js-clone-nav d-none d-md-block">
-					<li class="has-children active"><a th:href="@{/main}">Home</a></li>
-					<li class="has-children"><a th:href="@{/user/board}">게시판</a>
-						<ul class="dropdown arrow-top">
-							<li><a th:href="@{#}">공지</a></li>
-							<li><a th:href="@{#}">자유게시판</a></li>
-						</ul>
-					</li>
-					<li><a th:href="@{contact.html}">고객센터</a></li>
+		            <li class="has-children active">
+		              <a th:href="@{#}">Management</a>
+		              <ul class="dropdown arrow-top">
+		                <li><a th:href="@{#}">Board   &emsp; Management</a></li>
+		                <li><a th:href="@{/user/matches}">Matches &emsp; Management</a></li>
+		                <li><a th:href="@{/bestPlayer}">BestPlayer 	 Management</a></li>
+		                <li><a th:href="@{#}">Registration 	 Management</a></li>
+		                <li><a th:href="@{#}">Contact &emsp; Management</a></li>
+		              </ul>
+		            </li>
 				</ul>
+				</th:block>
+
+
+					<ul class="site-menu js-clone-nav d-none d-md-block">
+						<li><a th:href="@{/main}">Home</a></li>
+						<li><a th:href="@{/user/board}">Board</a></li>
+						<li><a th:href="@{/}">Matches</a></li>
+						<li><a th:href="@{/bestPlayer}">BestPlayer</a></li>
+						<li><a th:href="@{/}">Registration</a></li>
+						<li><a th:href="@{contact.html}">Contact</a></li>
+					</ul>
+
 			</div>
 		</nav>
 	</header>
