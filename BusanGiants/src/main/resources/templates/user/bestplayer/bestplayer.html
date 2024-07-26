@@ -14,12 +14,16 @@
       <div class="container">
         <div class="row align-items-center justify-content-start">
           <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
-            <h1 class="bg-text-line">수훈선수</h1>
-            <p class="mt-4">오늘의 수훈선수는 누구?!</p>
+            <h1 class="bg-text-line">BestPlayer</h1>
+            <p class="mt-4">수훈선수</p>
           </div>
         </div>
       </div>
     </div>
+
+	<th:block th:if="${session.role == 'admin'}">
+	<input type:button>
+	</th:block>
 
     <div class="site-section" data-aos="fade-up">
       <div class="container">
@@ -35,6 +39,8 @@
         </div>
       </div>
     </div>
+    
+    <th:block th:if="${session.role == 'admin'}">
 
     <div class="site-section" data-aos="fade-up">
       <div class="container">

@@ -17,7 +17,7 @@
           <div class="row align-items-center justify-content-start">
             <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
               <h1 class="bg-text-line">Welcome To Giants!</h1>
-              <p><a  class="btn btn-primary btn-sm rounded-0 py-3 px-5">Today Lotte Win!</a></p>
+              <p><a th:href="@{#}" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Today Lotte Win!</a></p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <div class="row align-items-center justify-content-start">
             <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
               <h1 class="bg-text-line">Welcome To Giants!</h1>
-              <p><a href="#" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Read More</a></p>
+              <p><a th:href="@{#}" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Today Lotte Win!</a></p>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
           <div class="row align-items-center justify-content-start">
             <div class="col-md-6 text-center text-md-left" data-aos="fade-up" data-aos-delay="400">
               <h1 class="bg-text-line">Welcome To Giants</h1>
-              <p><a href="#" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Read More</a></p>
+              <p><a th:href="@{#}" class="btn btn-primary btn-sm rounded-0 py-3 px-5">Today Lotte Win!</a></p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
               <div class="text">
                 <h2 class="h5 text-white">Russia's World Cup Championship</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+                <p class="mb-0"><a th:href="@{/bestplayer/bestplayerList}" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@
               <div class="text">
                 <h2 class="h5 text-white">Russia's World Cup Championship</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+                <p class="mb-0"><a th:href="@{#}" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@
               <div class="text">
                 <h2 class="h5 text-white">Russia's World Cup Championship</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repellat autem illum nostrum sit distinctio!</p>
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
+                <p class="mb-0"><a th:href="@{#}" class="btn btn-primary btn-sm px-4 py-2 rounded-0">Read More</a></p>
               </div>
             </div>
           </div>
@@ -95,11 +95,11 @@
           <div class="ml-auto pr-4 order-md-2">
             <div class="h5 text-black text-uppercase text-center text-lg-left">
               <div class="d-block d-md-inline-block mb-3 mb-lg-0">
-                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="mr-3 image"><span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">Lotte Giants </span>
+                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="mr-3 image"><span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">Lotte Giants </span>
               </div>
               <span class="text-muted mx-3 text-normal mb-3 mb-lg-0 d-block d-md-inline ">vs</span> 
               <div class="d-block d-md-inline-block">
-                <img src="images/kt_wiz.png" alt="Image" class="mr-3 image"><span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">KT Wiz</span>
+                <img th:src="@{/images/kt_wiz.png}" alt="Image" class="mr-3 image"><span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">KT Wiz</span>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@
               <div class="text-center text-lg-left">
                 <div class="d-block d-lg-flex align-items-center">
                   <div class="image mx-auto mb-3 mb-lg-0 mr-lg-3">
-                    <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                    <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                   </div>
                   <div class="text">
                     <h3 class="h5 mb-0 text-black">Lotte Giants</h3>
@@ -137,7 +137,7 @@
               <div class="">
                 <div class="d-block d-lg-flex align-items-center">
                   <div class="image mx-auto ml-lg-3 mb-3 mb-lg-0 order-2">
-                    <img src="images/kia_emblem_logo.jpg" alt="Image" class="img-fluid">
+                    <img th:src="@{/images/kia_emblem_logo.jpg}" alt="Image" class="img-fluid">
                   </div>
                   <div class="text order-1">
                     <h3 class="h5 mb-0 text-black">KIA Tigers</h3>
@@ -157,13 +157,13 @@
             <div class="site-block-tab">
               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Match 1</a>
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" th:href="@{#pills-home}" role="tab" aria-controls="pills-home" aria-selected="true">Match 1</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Match 2</a>
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" th:href="@{#pills-profile}" role="tab" aria-controls="pills-profile" aria-selected="false">Match 2</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Match 3</a>
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" th:href="@{#pills-contact}" role="tab" aria-controls="pills-contact" aria-selected="false">Match 3</a>
                 </li>
               </ul>
               <div class="tab-content" id="pills-tabContent">
@@ -179,7 +179,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/lotte_emblem.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -199,7 +199,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/한화이글스 심벌마크.png" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/한화이글스 심벌마크.png}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">한화</h3>
@@ -218,7 +218,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/lotte_emblem.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -238,7 +238,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/한화이글스 심벌마크.png" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/한화이글스 심벌마크.png}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">한화</h3>
@@ -257,7 +257,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/lotte_emblem.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -277,7 +277,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/한화이글스 심벌마크.png" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/한화이글스 심벌마크.png}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">한화</h3>
@@ -305,7 +305,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -325,7 +325,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/kia_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/kia_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">기아</h3>
@@ -344,7 +344,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -364,7 +364,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/kia_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/kia_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">기아</h3>
@@ -383,7 +383,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -403,7 +403,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/kia_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/kia_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">기아</h3>
@@ -431,7 +431,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/키움히어로즈 메인 엠블럼.png" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/키움히어로즈 메인 엠블럼.png}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">키움</h3>
@@ -451,7 +451,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -470,7 +470,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/키움히어로즈 메인 엠블럼.png" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/키움히어로즈 메인 엠블럼.png}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">키움</h3>
@@ -490,7 +490,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -509,7 +509,7 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                                <img src="images/키움히어로즈 메인 엠블럼.png" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/키움히어로즈 메인 엠블럼.png}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
                                 <h3 class="h5 mb-0 text-black">키움</h3>
@@ -529,7 +529,7 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="images/lotte_emblem_logo.jpg" alt="Image" class="img-fluid">
+                                <img th:src="@{/images/lotte_emblem_logo.jpg}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1 w-100">
                                 <h3 class="h5 mb-0 text-black">롯데</h3>
@@ -569,12 +569,12 @@
           <!-- uses .block-12 -->
           <div class="block-12">
             <figure>
-              <img src="images/김원중_main2.jpg" alt="Image" class="img-fluid">
+              <img th:src="@{/images/김원중_main2.jpg}" alt="Image" class="img-fluid">
             </figure>
             <div class="text">
               <span class="meta">0000년 00월 00일</span>
               <div class="text-inner">
-                <h2 class="heading mb-3"><a href="#" class="text-black">유튜브 링크</a></h2>
+                <h2 class="heading mb-3"><a th:href="@{#}" class="text-black">유튜브 링크</a></h2>
                 <p>경기 한줄평</p>
               </div>
             </div>
@@ -584,12 +584,12 @@
         <div class="item">
           <div class="block-12">
             <figure>
-              <img src="images/손호영_subMain.jpg" alt="Image" class="img-fluid">
+              <img th:src="@{/images/손호영_subMain.jpg}" alt="Image" class="img-fluid">
             </figure>
             <div class="text">
               <span class="meta">0000년 00월 00일</span>
               <div class="text-inner">
-                <h2 class="heading mb-3"><a href="#" class="text-black">유튜브 링크</a></h2>
+                <h2 class="heading mb-3"><a th:href="@{#}" class="text-black">유튜브 링크</a></h2>
                 <p>경기 한줄평</p>
               </div>
             </div>
@@ -599,12 +599,12 @@
         <div class="item">
           <div class="block-12">
             <figure>
-              <img src="images/승리.jpg" alt="Image" class="img-fluid">
+              <img th:src="@{/images/승리.jpg}" alt="Image" class="img-fluid">
             </figure>
             <div class="text">
               <span class="meta">0000년 00월 00일</span>
               <div class="text-inner">
-                <h2 class="heading mb-3"><a href="#" class="text-black">유튜브 링크</a></h2>
+                <h2 class="heading mb-3"><a th:href="@{#}" class="text-black">유튜브 링크</a></h2>
                 <p>경기 한줄평</p>
               </div>
             </div>
@@ -629,10 +629,10 @@
           <div class="col-md-6 col-lg-4">
             <div class="post-entry">
               <div class="image">
-                <img src="images/손호영_subMain.jpg" alt="Image" class="img-fluid">
+                <img th:src="@{/images/손호영_subMain.jpg}" alt="Image" class="img-fluid">
               </div>
               <div class="text p-4">
-                <h2 class="h5 text-black"><a href="#">손홍영 부상 악재</a></h2>
+                <h2 class="h5 text-black"><a th:href="@{#}">손홍영 부상 악재</a></h2>
                 <span class="text-uppercase date d-block mb-3"><small>2군행으로 말소 &bullet; 06 25, 2024</small></span>
                 <p class="mb-0">롯데 이대로 괜찮은가?</p>
               </div>
@@ -641,10 +641,10 @@
           <div class="col-md-6 col-lg-4">
             <div class="post-entry">
               <div class="image">
-                <img src="images/윌커슨 승리의하이파이브.jpg" alt="Image" class="img-fluid">
+                <img th:src="@{/images/윌커슨 승리의하이파이브.jpg}" alt="Image" class="img-fluid">
               </div>
               <div class="text p-4">
-                <h2 class="h5 text-black"><a href="#">반즈 복귀</a></h2>
+                <h2 class="h5 text-black"><a th:href="@{#}">반즈 복귀</a></h2>
                 <span class="text-uppercase date d-block mb-3"><small>반즈 1군 등록 &bullet; 07 15, 2024</small></span>
                 <p class="mb-0">반즈 부상 소식으로 안좋았던 전반기 분위기 뒤집을 수 있나?</p>
               </div>
@@ -653,10 +653,10 @@
           <div class="col-md-6 col-lg-4">
             <div class="post-entry">
               <div class="image">
-                <img src="images/240703-두산전-06-전준우 선취 솔로포KCH20233.jpg" alt="Image" class="img-fluid">
+                <img th:src="@{/images/240703-두산전-06-전준우 선취 솔로포KCH20233.jpg}" alt="Image" class="img-fluid">
               </div>
               <div class="text p-4">
-                <h2 class="h5 text-black"><a href="#">전준우 복귀</a></h2>
+                <h2 class="h5 text-black"><a th:href="@{#}">전준우 복귀</a></h2>
                 <span class="text-uppercase date d-block mb-3"><small>전준우 1군 등록 &bullet; 06 30, 2024</small></span>
                 <p class="mb-0">캡틴의 복귀로 팀분위기 전환</p>
               </div>
