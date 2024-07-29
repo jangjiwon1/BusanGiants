@@ -5,8 +5,13 @@ import lombok.Data;
 @Data
 public class BestPlayerDTO {
 	
-	private String file;
-	private String content;
+	private long   bestPlayerId;
+	private String upBestPlayer1Img;
+	private String upBestPlayer2Img;
+	private String player1UUID;
+	private String player2UUID;	
+	private String upContent1;
+	private String upContent2;
 	
 	
 }

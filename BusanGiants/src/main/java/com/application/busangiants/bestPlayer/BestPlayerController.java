@@ -3,6 +3,7 @@ package com.application.busangiants.bestPlayer;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -31,9 +32,40 @@ public class BestPlayerController {
 	
 	@GetMapping("/thumbnails")
 	@ResponseBody
-	public Resource thumbnails(@RequestParam("upBestPlayer1") String upBestPlayer1) throws MalformedURLException {
+	public Resource thumbnails(@RequestParam("upBestPlayer1Img") String upBestPlayer1) throws MalformedURLException {
 		// new UrlResource("file:" + 파일접근경로) 객체를 반환하여 이미지를 조회한다.
 		return new UrlResource("file:" + fileRepositoryPath + upBestPlayer1);	// 이미지 경로를 수정하여 사용한다.
+	}
+	
+	@PostMapping("/upload")
+	@ResponseBody
+	
+	public String upload(@RequestParam("upBestPlayer1Img") List<MultipartFile> upBestPlayer1Img) throws IllegalStateException, IOException {
+		
+		for (MultipartFile file : upBestPlayer1Img) {
+			
+			if (!upBestPlayer1Img.isEmpty()) {
+				
+				String originalFilename = file.getOriginalFilename();
+				
+				UUID uuid = UUID.randomUUID();
+				
+				String extension = originalFilename.substring(originalFilename.lastIndexOf("."));
+				
+				String uploadFileName = uuid + extension;
+				
+				file.transferTo(new File(fileRepositoryPath + uploadFileName));
+			}
+		}
+		
+		String jsScript = """
+				<script>
+					alert('업로드 되었습니다.);
+					location.href = '/bestplayer/bestplayerList';
+				</script>
+				""";
+		
+		return jsScript;
 	}
 	
 	@PostMapping("/update")
