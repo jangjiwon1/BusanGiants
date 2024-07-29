@@ -37,7 +37,7 @@ public class AdminMemberController {
 			jsScript = """
 					<script>
 						alert('로그인 되었습니다.');
-						location.href = '/main';
+						location.href = '/';
 						</script>
 					""";
 			
@@ -64,7 +64,7 @@ public class AdminMemberController {
 		
 		model.addAttribute("memberList" , adminMemberService.getMemberList());
 		
-		return "/main";
+		return "/";
 		
 	}
 	

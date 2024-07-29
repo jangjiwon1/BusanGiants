@@ -87,7 +87,7 @@
 		<nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
 			<div class="container position-relative">
 				<div class="site-logo">
-					<a th:href="@{/main}"><img th:src="@{/images/1628060821216.png}" alt=""></a>
+					<a th:href="@{/}"><img th:src="@{/images/1628060821216.png}" alt=""></a>
 				</div>
 				<th:block th:if="${session.role == 'admin'}">
 				<ul class="site-menu js-clone-nav d-none d-md-block">
@@ -106,7 +106,7 @@
 
 
 					<ul class="site-menu js-clone-nav d-none d-md-block">
-						<li><a th:href="@{/main}">Home</a></li>
+						<li><a th:href="@{/}">Home</a></li>
 						<li><a th:href="@{/board/boardList}">Board</a></li>
 						<li><a th:href="@{/matches/matchesList}">Matches</a></li>
 						<li><a th:href="@{/bestplayer/bestplayerList}">BestPlayer</a></li>
@@ -160,7 +160,7 @@
 						</div>
 						<div class="col-md-6 col-lg-6">
 							<ul class="list-unstyled">
-								<li><a th:href="@{#}">Home</a></li>
+								<li><a th:href="@{/}">Home</a></li>
 								<li><a th:href="@{#}">Board</a></li>
 								<li><a th:href="@{#}">Contact</a></li>
 							</ul>
