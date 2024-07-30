@@ -36,7 +36,7 @@ public class MemberController {
 		String jsScript = """
 				<script>
 					alert('회원가입되었습니다.');
-					location.href='/main';
+					location.href='/';
 				</script>""";
 		
 		return jsScript;
@@ -66,7 +66,7 @@ public class MemberController {
 			jsScript = """
 					<script>
 						alert('로그인 되었습니다.');
-						location.href='/main';
+						location.href='/';
 					</script>""";
 		
 		}
@@ -93,7 +93,7 @@ public class MemberController {
 		String jsScript = """
 				<script>
 					alert('로그아웃 되었습니다.');
-					location.href='/main';
+					location.href='/';
 				</script>
 				""";
 		

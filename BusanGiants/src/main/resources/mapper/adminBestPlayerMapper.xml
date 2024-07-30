@@ -8,6 +8,31 @@
 		FROM	BESTPLAYER
 	</select>
 	
+	<insert id="insertBestPlayer" parameterType="BestPlayerDTO">
+		INSERT INTO
+			BESTPLAYER (
+						UP_BEST_PLAYER1_IMG,
+						UP_BEST_PLAYER2_IMG,
+						PLAYER1_UUID,
+						PLAYER2_UUID,
+						UP_CONTENT1,
+						UP_CONTENT2
+						)
+				VALUES (
+						#{upBestPlayer1Img},
+						#{upBestPlayer2Img},
+						#{player1Uuid},
+						#{player2Uuid},
+						#{upContent1},
+						#{upContent2}
+						)			
+	</insert>
+	
+	<update id="updateBestPlayer" parameterType="BestPlayerDTO">
+		UPDATE BESTPLAYER
+	
+	</update>
+	
 	
 	
 </mapper>

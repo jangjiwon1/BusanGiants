@@ -3,7 +3,7 @@
 
 <mapper namespace="com.application.busangiants.bestPlayer.BestPlayerDAO">
 
-	<select id="getBestPlayerList" parameterType="BestPlayerDTO">
+	<select id="getBestPlayerList" parameterType="BestPlayerDTO" resultType="BestPlayerDTO">
 		SELECT  *
 		FROM    BESTPLAYER
 	</select>
