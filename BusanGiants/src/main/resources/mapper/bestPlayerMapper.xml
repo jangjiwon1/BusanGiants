@@ -3,15 +3,15 @@
 
 <mapper namespace="com.application.busangiants.bestPlayer.BestPlayerDAO">
 
-	<insert id="insertBestPlayer" parameterType="BestPlayerDTO">
-		INSERT INTO BESTPLAYER(
-				FILE,
-				CONTENT
-		)
-		VALUES (
-				#{file},
-				#{content}
-		)
-	</insert>
+	<select id="getBestPlayerList" parameterType="BestPlayerDTO">
+		SELECT  *
+		FROM    BESTPLAYER
+	</select>
+	
+	<select id="getBestPlayerDetail" parameterType="long" resultType="BestPlayerDTO">
+		SELECT	*
+		FROM	BESTPLAYER
+		WHERE	BESTPLAYER_ID = #{bestplayerId}
+	</select>
 	
 </mapper>
