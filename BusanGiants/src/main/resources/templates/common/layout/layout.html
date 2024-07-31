@@ -7,20 +7,20 @@
 	<title>Main</title>
 	
 	<!-- Font -->
-	<link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Mukta:300,400,700}"> 
-    <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="/fonts/icomoon/style.css>
     
     <!-- Css Styles -->
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
-    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
-    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
-    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
-    <link rel="stylesheet" th:href="@{/css/aos.css}">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/style.css">
     
-     <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
-	 <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	 <script src="/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
@@ -35,17 +35,17 @@
 				<div class="row align-items-center">
 					<div class="col-6 col-md-3">
 						<!-- 수정 필요 -->
-						<a th:href="@{#}" class="text-secondary px-2 pl-0"><span class="icon-facebook"></span></a>
-						<a th:href="@{#}" class="text-secondary px-2"><span class="icon-instagram"></span></a>
-						<a th:href="@{#}" class="text-secondary px-2"><span class="icon-twitter"></span></a> 
-						<a th:href="@{#}" class="text-secondary px-2"><span class="icon-linkedin"></span></a>
+						<a href="#" class="text-secondary px-2 pl-0"><span class="icon-facebook"></span></a>
+						<a href="#" class="text-secondary px-2"><span class="icon-instagram"></span></a>
+						<a href="#" class="text-secondary px-2"><span class="icon-twitter"></span></a> 
+						<a href="#" class="text-secondary px-2"><span class="icon-linkedin"></span></a>
 					</div>
 					<!-- login / register Begin -->
 					<div class="col-6 col-md-9 text-right">
 					<th:block th:if="${session.memberId == null }">
 							<div class="d-inline-block"
 								style="font-size: 0.8em; padding: 0.5em;">
-								<a th:href="@{/member/login}"
+								<a href="/member/login"
 									class="text-secondary p-2 d-flex align-items-center"
 									style="font-size: 1.0em; padding: 0.5em;"> <span
 									class="d-none d-md-block">Login</span>
@@ -53,7 +53,7 @@
 							</div>/
 							<div class="d-inline-block"
 								style="font-size: 1.0em; padding: 0.5em;">
-								<a th:href="@{/member/register}"
+								<a href="/member/register"
 									class="text-secondary p-2 d-flex align-items-center"
 									style="font-size: 0.8em; padding: 0.5em;"> <span
 									class="d-none d-md-block">Register</span>
@@ -63,7 +63,7 @@
 						<th:block th:unless="${session.memberId == null}">
 							<div class="d-inline-block"
 								style="font-size: 1.0em; padding: 0.5em;">
-								<a th:href="@{/member/register}"
+								<a href="/member/register"
 									class="text-secondary p-2 d-flex align-items-center"
 									style="font-size: 1.0em; padding: 0.5em;"> <span
 									class="d-none d-md-block">MyPage</span>
@@ -71,7 +71,7 @@
 							</div>/
 							<div class="d-inline-block"
 								style="font-size: 1.0em; padding: 0.5em;">
-								<a th:href="@{/member/logout}"
+								<a href="/member/logout"
 									class="text-secondary p-2 d-flex align-items-center"
 									style="font-size: 1.0em; padding: 0.5em;"> <span
 									class="d-none d-md-block">logout</span>
@@ -87,18 +87,18 @@
 		<nav class="site-navigation position-relative text-right bg-black text-md-right" role="navigation">
 			<div class="container position-relative">
 				<div class="site-logo">
-					<a th:href="@{/}"><img th:src="@{/images/1628060821216.png}" alt=""></a>
+					<a href="/"><img src="/images/1628060821216.png" alt=""></a>
 				</div>
 				<th:block th:if="${session.role == 'admin'}">
 				<ul class="site-menu js-clone-nav d-none d-md-block">
 		            <li class="has-children active">
-		              <a th:href="@{#}">Management</a>
+		              <a href="#">Management</a>
 		              <ul class="dropdown arrow-top">
-		                <li><a th:href="@{#}">Board   &emsp; Management</a></li>
-		                <li><a th:href="@{#}">Matches &emsp; Management</a></li>
-		                <li><a th:href="@{/bestplayer/adminBestPlayerAdd}">BestPlayer 	 Management</a></li>
-		                <li><a th:href="@{#}">Registration 	 Management</a></li>
-		                <li><a th:href="@{#}">Contact &emsp; Management</a></li>
+		                <li><a href="#">Board   &emsp; Management</a></li>
+		                <li><a href="#">Matches &emsp; Management</a></li>
+		                <li><a href="/bestplayer/adminBestPlayerAdd">BestPlayer 	 Management</a></li>
+		                <li><a href="#">Registration 	 Management</a></li>
+		                <li><a href="#">Contact &emsp; Management</a></li>
 		              </ul>
 		            </li>
 				</ul>
@@ -106,12 +106,12 @@
 
 
 					<ul class="site-menu js-clone-nav d-none d-md-block">
-						<li><a th:href="@{/}">Home</a></li>
-						<li><a th:href="@{/board/boardList}">Board</a></li>
-						<li><a th:href="@{/matches/matchesList}">Matches</a></li>
-						<li><a th:href="@{/bestplayer/bestplayerList}">BestPlayer</a></li>
-						<li><a th:href="@{/registration/registrationList}">Registration</a></li>
-						<li><a th:href="@{/contact/contactList}">Contact</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/board/boardList">Board</a></li>
+						<li><a href="/matches/matchesList">Matches</a></li>
+						<li><a href="/bestplayer/bestplayerList">BestPlayer</a></li>
+						<li><a href="/registration/registrationList">Registration</a></li>
+						<li><a href="/contact/contactList">Contact</a></li>
 					</ul>
 
 			</div>
@@ -160,9 +160,9 @@
 						</div>
 						<div class="col-md-6 col-lg-6">
 							<ul class="list-unstyled">
-								<li><a th:href="@{/}">Home</a></li>
-								<li><a th:href="@{#}">Board</a></li>
-								<li><a th:href="@{#}">Contact</a></li>
+								<li><a href="/">Home</a></li>
+								<li><a href="#">Board</a></li>
+								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -172,10 +172,10 @@
 							<h3 class="footer-heading mb-4">Follow Us</h3>
 
 							<div>
-								<a th:href="@{#}" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-								<a th:href="@{#}" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-								<a th:href="@{#}" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-								<a th:href="@{#}" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+								<a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+								<a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+								<a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+								<a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
 							</div>
 						</div>
 					</div>
@@ -188,9 +188,9 @@
 
 						<div class="block-16">
 							<figure>
-								<img th:src="@{/images/승리의 하이파이브.jpg}" alt="Image placeholder"
+								<img src="/images/승리의 하이파이브.jpg" alt="Image placeholder"
 									class="img-fluid rounded">
-								<a th:href="@{/}" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+								<a href="/" class="play-button popup-vimeo"><span class="icon-play"></span></a>
 							</figure>
 						</div>
 
@@ -206,17 +206,17 @@
 	
 	<!-- Js Plugins -->
 
-	<script th:src="@{/js/jquery-migrate-3.0.1.min.js}"></script>
-	<script th:src="@{/js/jquery-ui.js}"></script>
-	<script th:src="@{/js/popper.min.js}"></script>
-	<script th:src="@{/js/bootstrap.min.js}"></script>
-	<script th:src="@{/js/owl.carousel.min.js}"></script>
-	<script th:src="@{/js/jquery.stellar.min.js}"></script>
-	<script th:src="@{/js/jquery.countdown.min.js}"></script>
-	<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
-	<script th:src="@{/js/aos.js}"></script>
+	<script src="/js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/jquery.stellar.min.js"></script>
+	<script src="/js/jquery.countdown.min.js"></script>
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/aos.js"></script>
 
-	<script th:src="@{/js/main.js}"></script>
+	<script src="/js/main.js"></script>
 
 
 </body>
